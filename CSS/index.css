@@ -117,7 +117,7 @@ img {
 
 /* Apply the animation with 12-second cycle (6 seconds per image) */
 .slide-column:nth-child(1) .img-container:nth-child(1) {
-  animation: columnSlide 12s infinite; /* Increased cycle duration */
+  animation: columnSlide 6s infinite; /* Increased cycle duration */
 }
 
 .slide-column:nth-child(1) .img-container:nth-child(2) {
@@ -132,17 +132,17 @@ img {
 
 .slide-column:nth-child(2) .img-container:nth-child(2) {
   animation: columnSlide 12s infinite;
-  animation-delay: 12s; /* Delay for second column images */
+  animation-delay: 6s; /* Delay for second column images */
 }
 
 .slide-column:nth-child(3) .img-container:nth-child(1) {
   animation: columnSlide 12s infinite;
-  animation-delay: 12s;
+  animation-delay: 6s;
 }
 
 .slide-column:nth-child(3) .img-container:nth-child(2) {
   animation: columnSlide 12s infinite;
-  animation-delay: 18s; /* Delay for third column images */
+  animation-delay: 6s; /* Delay for third column images */
 }
 
 /* Main Section Styling */
@@ -257,12 +257,9 @@ img {
     flex-direction: column; /* Stack footer list vertically */
     gap: 10px;
   }
-}
 
-/* Slideshow Section Styling for Mobile Devices */
-@media (max-width: 768px) {
-  /* Stack slideshow columns vertically */
-  .slideshow-container {
+   /* Stack slideshow columns vertically */
+   .slideshow-container {
     flex-direction: column; /* Stack columns vertically */
     gap: 10px; /* Reduce space between stacked columns */
   }
@@ -304,16 +301,6 @@ img {
   }
 }
 
-/* For mobile-specific styling, add a reduced cycle time for better experience */
-@keyframes columnSlide {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
 
 /* For mobile-specific styling, add a reduced cycle time for better experience */
 @keyframes columnSlide {
@@ -324,10 +311,6 @@ img {
     opacity: 0;
   }
 }
-
-
-
-
 
 /* Pop-up Modal Styles */
 .popup {
