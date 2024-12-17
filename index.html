@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Von Master Barber</title>
+    <!-- Preload Key Images -->
+    <link rel="preload" href="Images/cut1.jpg" as="image">
+    <link rel="preload" href="Images/cut2.jpg" as="image">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="banner">
+            <div class="banner-text">
+                <p class="text-header">V.T.B</p>
+            </div>
+        </div>
+    </header>
+    <!-- Slideshow Section Under Header -->
+    <section class="slideshow-section">
+        <div class="slideshow-container">
+            <!-- First Column -->
+            <div class="slide-column">
+                <div class="img-container">
+                    <img src="Images/cut1.jpg" alt="Cut 1" loading="lazy">
+                </div>
+                <div class="img-container">
+                    <img src="Images/cut2.jpg" alt="Cut 2" loading="lazy">
+                </div>
+            </div>
+            <!-- Second Column -->
+            <div class="slide-column">
+                <div class="img-container">
+                    <img src="Images/cut3.jpg" alt="Cut 3" loading="lazy">
+                </div>
+                <div class="img-container">
+                    <img src="Images/cut4.jpg" alt="Cut 4" loading="lazy">
+                </div>
+            </div>
+            <!-- Third Column -->
+            <div class="slide-column">
+                <div class="img-container">
+                    <img src="Images/cut5.jpg" alt="Cut 5" loading="lazy">
+                </div>
+                <div class="img-container">
+                    <img src="Images/cut6.jpg" alt="Cut 6" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Section -->
+    <main class="main-section">
+        <div class="main-container">
+            <div class="left-column">
+                <img class="von-image" src="Images/von_image.jpg" alt="Barber Shop Image" loading="lazy">
+            </div>
+            <div class="right-column">
+                <h2 class="von-right-column-text">Welcome To Master Barber Von</h2>
+                <p class="von-right-column-text">
+                    Here At Von Master Barber, I provide top-notch grooming and styling services for all types of hair. Our team of professional barbers is dedicated to delivering personalized service that caters to your unique style and preferences. Whether you're looking for a classic cut, a modern fade, or a beard trim, we ensure that every client leaves our shop feeling confident and fresh. Our atmosphere is welcoming and relaxing, with the latest grooming tools and products to ensure that your experience is nothing short of exceptional. Book you appointment 
+                    <a href="https://app.thecut.co/barbers/VTBcuts">here today</a> to receive your blessing from Maser Barber Von!
+                </p>
+            </div>
+        </div>
+    </main>
+      <!-- Footer Section -->
+      <footer class="footer-section">
+        <ul class="footer-list">
+            <li class="underline"><a  href="#">Shave BarberShop:</a></li>
+            <li><a href="#">1912 Washington Ave. Sain Louis, MO 63103</a></li>
+            <li class="underline"><a href="#">Cell: 314-580-3474</a></li>
+            <li class="underline"><a href="#">Shop: 314-367-4283</a></li>
+            <!-- IG Link -->
+            <li>
+                <a href="https://www.instagram.com/von_thebarber?igsh=OG85bzR0NWhwaWxk" target="_blank">
+                    <img src="Images/IGLogo.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;"/>
+                </a>
+            </li>
+        </ul>     
+    </footer>
+       <!-- Pop-Up Modal -->
+       <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Book With Von Master Barber!</h2>
+            <h3>Experience The Barbering Yourself.</h3>
+            <div class="video-container">
+                <video autoplay loop>
+                    <source src="Videos/hair_cuting.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p id="popup-paragraph" class="popup-text">Enjoy your video! Book your appointment with us today for a premium grooming experience.</p>
+            <a href="https://app.thecut.co/barbers/VTBcuts" class="book-button">Book Now</a>
+        </div>
+    </div>
+    <script src="JavaScript/index.js"></script>
+</body>
+</html>
