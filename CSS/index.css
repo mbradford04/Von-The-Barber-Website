@@ -224,6 +224,12 @@ img {
   text-decoration: underline;
 }
 
+.ig-logo{
+  width: 50px; 
+  height: 50px; 
+  border-radius: 10px;
+}
+
 /* Responsive Design for Tablets */
 @media (max-width: 768px) {
   .banner {
