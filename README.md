@@ -1,4 +1,4 @@
-The purpose of this website is showcase the skillset and showmanship for one of my clients that is a Master Barber within the St.Louis Metropolitan area. 
+The purpose of this website is to showcase the skillset and showmanship for one of my clients that is a Master Barber within the St.Louis Metropolitan area. 
 The website features a header section wih animated text followed by a three column layout to showcase six images having their own transitions via Javascript demonstrating my cliens portfolio.
 The main section is comprised of the clients image as well as a general background with a footer to display the clients information and social media.
 A pop up modal is used for user access to aid booking. 
