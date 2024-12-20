@@ -9,6 +9,16 @@ Website on Desktop/Tablet:
 Website With Pop Up Modal On Desktop/Tablet:
 ![Screenshot (220)](https://github.com/user-attachments/assets/d34b5218-57a7-4577-98ca-8de004ca3a71)
 
+
+
+
+
+
+
+
+
+
+
 Website On Mobile Devices
 ![vtb mobile](https://github.com/user-attachments/assets/2a8a971a-416f-4cd7-a661-1f540a60f916)
 
