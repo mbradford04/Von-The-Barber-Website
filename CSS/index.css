@@ -66,8 +66,8 @@ body, html {
 
 /* Slideshow Section Styling */
 .slideshow-section {
-  padding-top: 120px; /* Space for header */
-  padding-bottom: 50px; /* Space for footer */
+  padding-top: 120px; 
+  padding-bottom: 50px; 
 }
 
 .slideshow-container {
@@ -78,7 +78,7 @@ body, html {
 
 .slide-column {
   flex: 1;
-  height: 300px; /* Height of each slideshow column */
+  height: 300px; 
   position: relative;
   overflow: hidden;
 }
@@ -91,7 +91,7 @@ body, html {
   will-change: opacity;
   top: 0;
   left: 0;
-  transition: opacity 1s ease-in-out; /* Smooth transition between images */
+  transition: opacity 1s ease-in-out; 
 }
 
 img {
@@ -108,8 +108,8 @@ img {
 .slide-column:nth-child(2) .img-container:nth-child(2),
 .slide-column:nth-child(3) .img-container:nth-child(1),
 .slide-column:nth-child(3) .img-container:nth-child(2) {
-  visibility: visible; /* Make sure all images are visible at the start */
-  opacity: 1; /* Ensure all images start at full opacity */
+  visibility: visible; 
+  opacity: 1; /
 }
 
 /* Smooth Image Change - Ensure no gaps and a smooth transition */
@@ -127,12 +127,12 @@ img {
 
 /* Apply the animation with 12-second cycle (6 seconds per image) */
 .slide-column:nth-child(1) .img-container:nth-child(1) {
-  animation: columnSlide 6s infinite; /* Increased cycle duration */
+  animation: columnSlide 6s infinite; 
 }
 
 .slide-column:nth-child(1) .img-container:nth-child(2) {
   animation: columnSlide 10s infinite;
-  animation-delay: 6s; /* Start the second image after 6 seconds */
+  animation-delay: 6s; 
 }
 
 .slide-column:nth-child(2) .img-container:nth-child(1) {
@@ -142,7 +142,7 @@ img {
 
 .slide-column:nth-child(2) .img-container:nth-child(2) {
   animation: columnSlide 10s infinite;
-  animation-delay: 6s; /* Delay for second column images */
+  animation-delay: 6s; 
 }
 
 .slide-column:nth-child(3) .img-container:nth-child(1) {
@@ -152,12 +152,12 @@ img {
 
 .slide-column:nth-child(3) .img-container:nth-child(2) {
   animation: columnSlide 10s infinite;
-  animation-delay: 6s; /* Delay for third column images */
+  animation-delay: 6s; 
 }
 
 /* Main Section Styling */
 .main-section {
-  padding: 60px 20px; /* Padding for top and sides */
+  padding: 60px 20px; 
   background-color: #63a758;
 }
 
@@ -217,13 +217,13 @@ img {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center the items horizontally */
-  gap: 10px; /* Space between list items */
+  flex-direction: column; 
+  align-items: center; 
+  gap: 10px; 
 }
 
 .footer-list li {
-  display: block; /* Ensures each item takes up a full line */
+  display: block; 
 }
 
 .footer-list a {
@@ -269,7 +269,7 @@ img {
   }
 
   .main-container {
-    flex-direction: column; /* Stack image and text columns vertically */
+    flex-direction: column; 
   }
  
 
@@ -278,14 +278,14 @@ img {
   }
 
   .footer-list {
-    flex-direction: column; /* Stack footer list vertically */
+    flex-direction: column; 
     gap: 10px;
   }
 
   
  
   .slide-column {
-    flex: 0 0 48%; /* Ensure first two columns take 48% of the container width */
+    flex: 0 0 48%; 
     height: auto;
     position: relative;
     overflow: hidden;
@@ -293,7 +293,7 @@ img {
 
   .img-container {
     width: 100%;
-    height: auto; /* Allow height to adjust based on the image aspect ratio */
+    height: auto; 
     opacity: 0;
     position: relative;
     transition: opacity 1s ease-in-out;
@@ -301,9 +301,9 @@ img {
 
   .slide-column .img-container img {
     width: 100%;
-    height: 100%; /* Ensure the images scale responsively */
+    height: 100%;
     margin: auto;
-    object-fit: cover; /* Maintain the aspect ratio and avoid stretching */
+    object-fit: cover; 
   }
 
   .von-title{
@@ -317,7 +317,7 @@ img {
 
   /* Show only images from the first column on mobile */
   .slide-column:nth-child(3) {
-    display: none; /* Hide second and third columns */
+    display: none; 
   }
 
   /* Adjust animation to work better on smaller screens */
@@ -325,11 +325,11 @@ img {
     animation: columnSlide 10s infinite;
   }
 
-  /* Adjust first two columns to be side by side */
+
   .slide-column:nth-child(1),
   .slide-column:nth-child(2) {
-    flex: 0 0 48%; /* Take 48% width of the container, leaving 4% gap */
-    height: auto; /* Adjust height based on content */
+    flex: 0 0 48%; 
+    height: auto; 
     position: relative;
     overflow: hidden;
   }
@@ -337,7 +337,7 @@ img {
   .slide-column:nth-child(1) .img-container:nth-child(2),
   .slide-column:nth-child(2) .img-container:nth-child(2) {
     animation: columnSlide 10s infinite;
-    animation-delay: 5s; /* Delay for the second image */
+    animation-delay: 5s; 
   }
 }
 
@@ -347,8 +347,8 @@ img {
 /* For small mobile screens such as 320px */
 @media (max-width: 480px) {
   .banner {
-    height: 70px; /* Reduce the height for smaller screens */
-    font-size: 2rem; /* Reduce font size for better fit */
+    height: 70px; 
+    font-size: 2rem; 
   }
 
   .banner-text {
@@ -356,27 +356,27 @@ img {
   }
 
   .slideshow-container {
-    flex-direction: column; /* Stack slideshow images vertically */
+    flex-direction: column; 
     gap: 10px;
   }
 
   .slide-column {
-    flex: 1 100%; /* Stack images vertically */
-    height: auto; /* Adjust height */
+    flex: 1 100%; 
+    height: auto; 
     margin-bottom: 10px;
   }
 
   .img-container {
     width: 100%;
-    height: auto; /* Allow images to scale properly */
+    height: auto; 
   }
 
   .main-container {
-    flex-direction: column; /* Stack image and text columns vertically */
+    flex-direction: column; 
   }
 
   .left-column, .right-column {
-    min-width: 100%; /* Ensure columns take full width on small screens */
+    min-width: 100%; 
   }
 
   .right-column h2 {
@@ -389,16 +389,16 @@ img {
 
   .footer-list {
     flex-direction: column;
-    gap: 5px; /* Reduce gap between footer items */
+    gap: 5px; 
   }
 
   .footer-list a {
     font-size: 1rem;
-    padding: 3px 7px; /* Adjust padding for smaller screens */
+    padding: 3px 7px; 
   }
 
   .ig-logo {
-    width: 40px; /* Smaller Instagram logo */
+    width: 40px; 
     height: 40px;
   }
 
@@ -409,16 +409,16 @@ img {
     width: 40%;
   }
   .popup-content {
-    width: 40%; /* Make the popup take 90% of the screen width */
-    max-width: 200px; /* Max width for the popup */
+    width: 40%;
+    max-width: 200px; 
   }
 
   .popup-text {
-    font-size: 1rem; /* Adjust font size for readability */
+    font-size: 1rem; 
   }
 
   .book-button {
-    padding: 8px 15px; /* Adjust button padding */
+    padding: 8px 15px; 
     font-size: 1rem;
   }
 }
@@ -436,7 +436,7 @@ img {
 
 /* Pop-up Modal Styles */
 .popup {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -451,7 +451,7 @@ img {
 .popup-content {
   background-color: white;
   padding: 20px;
-  width: 40%; /* Adjust to make the modal responsive */
+  width: 40%; 
   max-width: 300px;
   border-radius: 10px;
   text-align: center;
@@ -484,7 +484,7 @@ img {
 
 /* Popup visibility and functionality */
 .popup.show {
-  display: flex; /* Display the popup when it has the "show" class */
+  display: flex;
 }
 
 /* Ensure that any mobile device is properly handling the video and text within the popup */
