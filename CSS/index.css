@@ -1,4 +1,3 @@
-/* General body and container styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -87,7 +86,7 @@ body, html {
 .img-container {
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   will-change: opacity;
   top: 0;
@@ -100,6 +99,17 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Ensure images in all columns are shown at once initially */
+.slide-column:nth-child(1) .img-container:nth-child(1),
+.slide-column:nth-child(1) .img-container:nth-child(2),
+.slide-column:nth-child(2) .img-container:nth-child(1),
+.slide-column:nth-child(2) .img-container:nth-child(2),
+.slide-column:nth-child(3) .img-container:nth-child(1),
+.slide-column:nth-child(3) .img-container:nth-child(2) {
+  visibility: visible; /* Make sure all images are visible at the start */
+  opacity: 1; /* Ensure all images start at full opacity */
 }
 
 /* Smooth Image Change - Ensure no gaps and a smooth transition */
@@ -121,27 +131,27 @@ img {
 }
 
 .slide-column:nth-child(1) .img-container:nth-child(2) {
-  animation: columnSlide 12s infinite;
+  animation: columnSlide 10s infinite;
   animation-delay: 6s; /* Start the second image after 6 seconds */
 }
 
 .slide-column:nth-child(2) .img-container:nth-child(1) {
-  animation: columnSlide 12s infinite;
+  animation: columnSlide 10s infinite;
   animation-delay: 6s;
 }
 
 .slide-column:nth-child(2) .img-container:nth-child(2) {
-  animation: columnSlide 12s infinite;
+  animation: columnSlide 10s infinite;
   animation-delay: 6s; /* Delay for second column images */
 }
 
 .slide-column:nth-child(3) .img-container:nth-child(1) {
-  animation: columnSlide 12s infinite;
+  animation: columnSlide 10s infinite;
   animation-delay: 6s;
 }
 
 .slide-column:nth-child(3) .img-container:nth-child(2) {
-  animation: columnSlide 12s infinite;
+  animation: columnSlide 10s infinite;
   animation-delay: 6s; /* Delay for third column images */
 }
 
@@ -179,9 +189,13 @@ img {
 }
 
 .von-image {
-  width: 35%;
+  width: 70%;
   margin: auto;
   border-radius: 10px;
+}
+
+.von-title{
+  display: none;
 }
 
 .von-right-column-text {
@@ -234,20 +248,30 @@ img {
 @media (max-width: 768px) {
   .banner {
     height: 80px;
-  }
+}
+
   .banner-text {
     font-size: 2.5rem;
   }
+
   .slideshow-container {
-    flex-direction: column; /* Stack columns vertically for smaller screens */
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px; 
+    justify-content: space-between;
   }
+
+
   .slide-column {
-    height: 250px;
+    height: auto;
+    position: relative;
+    overflow: hidden
   }
 
   .main-container {
     flex-direction: column; /* Stack image and text columns vertically */
   }
+ 
 
   .left-column, .right-column {
     min-width: 100%;
@@ -258,14 +282,11 @@ img {
     gap: 10px;
   }
 
-   /* Stack slideshow columns vertically */
-   .slideshow-container {
-    flex-direction: column; /* Stack columns vertically */
-    gap: 10px; /* Reduce space between stacked columns */
-  }
-
+  
+ 
   .slide-column {
-    height: auto; /* Let the column height adjust based on image size */
+    flex: 0 0 48%; /* Ensure first two columns take 48% of the container width */
+    height: auto;
     position: relative;
     overflow: hidden;
   }
@@ -280,12 +301,21 @@ img {
 
   .slide-column .img-container img {
     width: 100%;
-    height: auto; /* Ensure the images scale responsively */
+    height: 100%; /* Ensure the images scale responsively */
+    margin: auto;
     object-fit: cover; /* Maintain the aspect ratio and avoid stretching */
   }
 
+  .von-title{
+    color: white;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+
+
+
   /* Show only images from the first column on mobile */
-  .slide-column:nth-child(2),
   .slide-column:nth-child(3) {
     display: none; /* Hide second and third columns */
   }
@@ -295,14 +325,106 @@ img {
     animation: columnSlide 10s infinite;
   }
 
-  .slide-column:nth-child(1) .img-container:nth-child(2) {
+  /* Adjust first two columns to be side by side */
+  .slide-column:nth-child(1),
+  .slide-column:nth-child(2) {
+    flex: 0 0 48%; /* Take 48% width of the container, leaving 4% gap */
+    height: auto; /* Adjust height based on content */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide-column:nth-child(1) .img-container:nth-child(2),
+  .slide-column:nth-child(2) .img-container:nth-child(2) {
     animation: columnSlide 10s infinite;
     animation-delay: 5s; /* Delay for the second image */
   }
 }
 
 
-/* For mobile-specific styling, add a reduced cycle time for better experience */
+/* Media Queries for Mobile Devices */
+
+/* For small mobile screens such as 320px */
+@media (max-width: 480px) {
+  .banner {
+    height: 70px; /* Reduce the height for smaller screens */
+    font-size: 2rem; /* Reduce font size for better fit */
+  }
+
+  .banner-text {
+    font-size: 1.5rem;
+  }
+
+  .slideshow-container {
+    flex-direction: column; /* Stack slideshow images vertically */
+    gap: 10px;
+  }
+
+  .slide-column {
+    flex: 1 100%; /* Stack images vertically */
+    height: auto; /* Adjust height */
+    margin-bottom: 10px;
+  }
+
+  .img-container {
+    width: 100%;
+    height: auto; /* Allow images to scale properly */
+  }
+
+  .main-container {
+    flex-direction: column; /* Stack image and text columns vertically */
+  }
+
+  .left-column, .right-column {
+    min-width: 100%; /* Ensure columns take full width on small screens */
+  }
+
+  .right-column h2 {
+    font-size: 1.5rem;
+  }
+
+  .right-column p {
+    font-size: 0.9rem;
+  }
+
+  .footer-list {
+    flex-direction: column;
+    gap: 5px; /* Reduce gap between footer items */
+  }
+
+  .footer-list a {
+    font-size: 1rem;
+    padding: 3px 7px; /* Adjust padding for smaller screens */
+  }
+
+  .ig-logo {
+    width: 40px; /* Smaller Instagram logo */
+    height: 40px;
+  }
+
+  /* Pop-up Modal Styles */
+
+  .popup{
+    height: 40%;
+    width: 40%;
+  }
+  .popup-content {
+    width: 40%; /* Make the popup take 90% of the screen width */
+    max-width: 200px; /* Max width for the popup */
+  }
+
+  .popup-text {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .book-button {
+    padding: 8px 15px; /* Adjust button padding */
+    font-size: 1rem;
+  }
+}
+
+
+/* For mobile-specific styling, add a reduced cycle time for better experience */  
 @keyframes columnSlide {
   0%, 100% {
     opacity: 1;
@@ -323,14 +445,14 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .popup-content {
   background-color: white;
   padding: 20px;
-  width: 80%; /* Adjust to make the modal responsive */
-  max-width: 600px;
+  width: 40%; /* Adjust to make the modal responsive */
+  max-width: 300px;
   border-radius: 10px;
   text-align: center;
 }
